@@ -44,7 +44,7 @@ class BinarySearchTree {
             }else if(value < currentNode.value){
                 currentNode = currentNode.left;
             }
-            else if(value === currentNode.value){
+            else if(currentNode.value === value){
                 return currentNode;
             }
             else{
