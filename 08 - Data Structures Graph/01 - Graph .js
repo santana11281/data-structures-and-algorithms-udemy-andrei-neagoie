@@ -7,12 +7,18 @@
 
   addVertex(node) {
 
+    this.adjacentList[node] = []
+    this.numberOfNodes++
+
 
   }
 
   addEdge(node1, node2) {
 
-    
+    this.adjacentList[node1].push(node2)
+    this.adjacentList[node2].push(node1)
+
+
   }
 
   showConnections() { 
@@ -32,8 +38,31 @@
 
  let myGraph = new Graph()
 
+myGraph.addVertex("a")
+myGraph.addVertex("b")
+myGraph.addVertex("c")
+myGraph.addVertex("d")
 
- console.log(myGraph)
+myGraph.addEdge('a','b')
+myGraph.addEdge('a','c')
+myGraph.showConnections()
+//  console.log(myGraph)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
